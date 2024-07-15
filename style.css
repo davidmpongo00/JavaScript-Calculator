@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #203240;
+}
+
+.calculatrice {
+  width: 300px;
+  background: #203240;
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: 25px 25px 75px rgb(0, 0, 0, 0.25),
+    10px 10px 70px rgb(0, 0, 0, 0.25),
+    inset 5px 5px 10px rgb(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgb(0, 0, 0, 0.75);
+}
+#ecran {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  background: #0c1c26;
+  color: #2fc900;
+  height: 100px;
+  width: 100%;
+  font-size: 30px;
+  font-weight: 500;
+  padding-right: 10px;
+  border-radius: 40px 40px 10px 10px;
+  box-shadow: inset 0px 1px 0px #7d7c7e, 0px 1px 0px #7d7c7e,
+    inset 0px -1px 0px #0c0c0c;
+  border: 2px solid #070f14;
+  overflow-x: hidden;
+  user-select: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin: 40px 5px 10px;
+  place-items: center;
+}
+
+.buttons .button {
+  position: relative;
+  color: #2fc900;
+  cursor: pointer;
+  border: 2px solid #08141c;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+#equal {
+  color: #2d506a;
+  background: #2fc900;
+}
+#equal:hover {
+  box-shadow: 0.4rem 0.4rem 1rem #2fc900 inset,
+    -0.4rem -0.4rem 1rem #80f33e inset;
+}
+.buttons .button:hover {
+  box-shadow: 0.4rem 0.4rem 1rem #1c1c1c inset,
+    -0.4rem -0.4rem 1rem #2d506a inset;
+}
+
+.buttons .button::before {
+  position: absolute;
+  content: "";
+  height: 50px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  box-shadow: inset 0px 1px 0px #7d7c7e;
+}
